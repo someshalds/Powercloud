@@ -19,7 +19,7 @@ stages{
 
         stage ('Deployments'){
                              steps {
-                        sshagent(['Tomcat']) {
+                        sshagent(['tomcat']) {
                        sh "scp -v -o StrictHostKeyChecking=no ./web/target/*.war tomcat_user@3.111.168.130:/opt/tomcat/webapps/"
       }
                     }
